@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="haiku.robotics — новая команда FIRST Tech Challenge при РФМШ, Алматы. Первый сезон, наставники Bolt.m3 (Motivate Award, Worlds’24). Информация для партнёров.">
+<meta name="description" content="haiku.robotics — новая команда FIRST Tech Challenge при РФМШ, Алматы. Первый сезон, наставники Bolt.m3, десять наград FTC. Информация для партнёров.">
 <link rel="canonical" href="https://haikuftc.xyz/">
 <meta property="og:title" content="haiku.robotics — команда FTC из Алматы">
-<meta property="og:description" content="haiku.robotics — новая команда FIRST Tech Challenge при РФМШ, Алматы. Первый сезон, наставники Bolt.m3 (Motivate Award, Worlds’24). Информация для партнёров.">
+<meta property="og:description" content="haiku.robotics — новая команда FIRST Tech Challenge при РФМШ, Алматы. Первый сезон, наставники Bolt.m3, десять наград FTC. Информация для партнёров.">
 <meta property="og:image" content="https://haikuftc.xyz/banner.webp">
 <meta property="og:url" content="https://haikuftc.xyz/">
 <meta property="og:type" content="website">
@@ -101,7 +101,7 @@ canvas, img { display: block; max-width: 100%; }
 section.block { padding-block: var(--section); border-bottom: 1px solid var(--line); }
 .head { display: grid; gap: var(--sp-4); margin-bottom: var(--sp-7); }
 .two { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--sp-8); align-items: start; }
-.about { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: var(--sp-8); align-items: center; }
+.about { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--sp-8); align-items: start; }
 .pic { aspect-ratio: 1; }
 .pic img { width: 100%; height: 100%; object-fit: cover; -webkit-mask-image: radial-gradient(closest-side, #000 72%, transparent 100%); mask-image: radial-gradient(closest-side, #000 72%, transparent 100%); will-change: transform; }
 
@@ -110,6 +110,11 @@ section.block { padding-block: var(--section); border-bottom: 1px solid var(--li
 .mentor .label { color: var(--dark); }
 .mentor .wrap { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--sp-7); align-items: end; }
 .mentor h2 { margin-top: var(--sp-4); }
+.awards { list-style: none; margin: var(--sp-8) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--sp-7); border-top: 2px solid var(--bg); }
+.awards li { display: grid; grid-template-columns: 52px minmax(0, 1fr); column-gap: var(--sp-3); align-items: baseline; padding: var(--sp-3) 0; border-bottom: 1px solid rgba(5,5,5,.22); }
+.awards .y { font-family: var(--f-display); font-weight: 900; font-size: var(--t-small); font-variant-numeric: tabular-nums; }
+.awards b { font-weight: 700; }
+.awards .w { grid-column: 2; font-size: var(--t-small); color: var(--dark); }
 
 .facts { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--accent); border-left: 1px solid var(--line); }
 .fact { padding: var(--sp-5); display: grid; gap: var(--sp-1); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -184,7 +189,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .pitch .wrap, .two, .about, .mentor .wrap, .contact .wrap { grid-template-columns: minmax(0, 1fr); gap: var(--sp-6); }
   .pic { max-width: 380px; width: 100%; margin: 0 auto; }
   .contact .pic { order: -1; max-width: 260px; }
-  .phases { grid-template-columns: minmax(0, 1fr); }
+  .phases, .awards { grid-template-columns: minmax(0, 1fr); }
   .nav { flex-wrap: wrap; row-gap: 0; }
   .nav nav { order: 3; width: 100%; overflow-x: auto; scrollbar-width: none; }
 }
@@ -235,7 +240,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <div class="wrap">
       <h1>Новая команда FTC из Алматы. <span class="accent">Цель первого сезона — чемпионат мира.</span></h1>
       <div class="stack">
-        <p class="lead">Мы команда при РФМШ. Нас ведут наставники из Bolt.m3, обладатели Motivate Award на чемпионате мира 2024 года.</p>
+        <p class="lead">Мы команда при РФМШ. Нас ведут наставники из Bolt.m3: десять наград FTC за четыре сезона, от Центральной Азии до Хьюстона и Сиднея.</p>
         <div class="cta-row">
           <a class="btn btn-main" href="https://www.instagram.com/ftc_haiku" target="_blank" rel="noopener">Написать нам в Instagram</a>
           <a class="btn" href="#game">Сыграть матч</a>
@@ -246,10 +251,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
   <section class="block" id="about">
     <div class="wrap about">
-      <div class="pic rv"><img class="bob" id="mascot" loading="lazy" src="mascot.webp" alt="Талисман команды: ласточка с поясной сумкой" width="1254" height="1254"></div>
       <div class="stack">
         <span class="label">О команде</span>
         <h2>Новички без скидок на дебют</h2>
+      </div>
+      <div class="stack">
         <p class="lead">Турнирного опыта у нас ноль, и мы этого не скрываем. Зато за плечами физмат-школа, а рядом наставники, которые уже выигрывали.</p>
         <p class="muted">Почему хайку? В трёх строках нет ничего лишнего, и робота мы хотим построить таким же. Ласточка на логотипе летает быстро и поворачивает точно. От робота нам нужно то же самое.</p>
       </div>
@@ -262,7 +268,21 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <span class="label">Наставники</span>
         <h2>Нас ведут чемпионы, команда Bolt.m3</h2>
       </div>
-      <p class="lead">FTC №&nbsp;22801, Алматы, в соревнованиях с 2022 года. На чемпионате мира 2024 года в Хьюстоне взяли Motivate Award. Теперь учат нас строить робота.</p>
+      <p class="lead">FTC №&nbsp;22801, Алматы, в соревнованиях с 2022 года. Теперь учат нас строить робота.</p>
+    </div>
+    <div class="wrap" style="display:block">
+      <ol class="awards" aria-label="Награды Bolt.m3">
+        <li><span class="y">2026</span><b>Connect Award, 2-е место</b><span class="w">Центральная Азия</span></li>
+        <li><span class="y">2025</span><b>Connect Award Winner</b><span class="w">Спрингфилд</span></li>
+        <li><span class="y">2025</span><b>Motivate Award</b><span class="w">Центральная Азия</span></li>
+        <li><span class="y">2024</span><b>Motivate Award Finalist</b><span class="w">Хьюстон, чемпионат мира</span></li>
+        <li><span class="y">2024</span><b>Inspire Award Winner</b><span class="w">Центральная Азия</span></li>
+        <li><span class="y">2024</span><b>Winning Alliance</b><span class="w">Digital Ministry Cup</span></li>
+        <li><span class="y">2023</span><b>Inspire Award Finalist</b><span class="w">Сидней</span></li>
+        <li><span class="y">2023</span><b>Connect Award Winner</b><span class="w">Сидней</span></li>
+        <li><span class="y">2023</span><b>Think Award Finalist</b><span class="w">Сидней</span></li>
+        <li><span class="y">2023</span><b>Design Award</b><span class="w">Центральная Азия</span></li>
+      </ol>
     </div>
   </section>
 
@@ -407,7 +427,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
   if (!calm) (function drift() {
     var t = 'translate(' + (mx * -22).toFixed(1) + 'px,' + (my * -16).toFixed(1) + 'px) rotate(' + (mx * 2).toFixed(2) + 'deg)';
-    mascot.style.transform = t; logo.style.transform = t;
+    if (mascot) mascot.style.transform = t; if (logo) logo.style.transform = t;
     requestAnimationFrame(drift);
   })();
 
